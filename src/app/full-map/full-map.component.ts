@@ -13,7 +13,7 @@ export class FullMapComponent implements OnInit {
   subs: Subscription;
 
   farms = [];
-  nexturl = "";
+
   constructor(private farmsService: FarmsRouteService, private router:Router) { }
 
   ngOnInit() {

@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 import { FullMapComponent } from './full-map/full-map.component';
 import { LandViewDetailsComponent } from './full-map/land-view-details/land-view-details.component';
 import { FormsModule } from '@angular/forms';
+import { FarmDataService } from './farms/farm-data.service';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
@@ -43,6 +44,7 @@ const routes: Route[] = [
     RouterModule.forRoot(routes)
   ],
   providers: [
+    FarmDataService,
     FarmsRouteService
   ],
   bootstrap: [AppComponent]
