@@ -8,7 +8,7 @@
 		</div>
 		<div class="p-4">
 			<h1>
-				<a href="index.html" class="logo"> Martha's <span>Vineyard Land Bank Commission</span></a>
+				<a routerLink="/" class="logo"> Martha's <span>Vineyard Land Bank Commission</span></a>
 			</h1>
 
 			<ul class="list-unstyled components mb-5">
@@ -18,7 +18,7 @@
 				<li>
 					<a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ENJOYING PROPERTIES</a>
 					<ul class="collapse list-unstyled" id="pageSubmenu1">
-						<li><a href="#"><span class="fa fa-chevron-right mr-2"></span> Map To Properties</a></li>
+						<li><a routerLink="/map"><span class="fa fa-chevron-right mr-2"></span> Map To Properties</a></li>
 						<li><a href="#"><span class="fa fa-chevron-right mr-2"></span> Interactive Map</a></li>
 						<li><a href="#"><span class="fa fa-chevron-right mr-2"></span> Public Use of Land Bank Properties</a></li>
 						<li><a href="#"><span class="fa fa-chevron-right mr-2"></span> Dogs</a></li>
@@ -88,12 +88,11 @@
 	</nav>
 
 	<!-- Page Content  -->
-	<div class="container bg-white pt-2 pl-md-5 pr-md-5" style="height: 100vh; overflow-y: scroll;">
-		<div class="row">
+	<div id="content" class="pt-2 pl-md-5 pr-md-5" style="height: 100vh; overflow-y: scroll;">
+		<div class="row ml-3 mr-3">
 			<img src="assets/static/images/martha.gif" width="100%" />
 		</div>
 
 		<router-outlet></router-outlet>
-
 	</div>
 </div>

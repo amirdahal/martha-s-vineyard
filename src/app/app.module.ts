@@ -8,11 +8,15 @@ import {Route, RouterModule} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FaqComponent } from './faq/faq.component';
 import { TalktousComponent } from './talktous/talktous.component';
+import { FarmsRouteService } from './farms/farms-route.service';
+import { CommonModule } from '@angular/common';
+import { FullMapComponent } from './full-map/full-map.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
   { path: 'faq', component: FaqComponent },
-  { path: 'talk', component: TalktousComponent }
+  { path: 'talk', component: TalktousComponent },
+  {path: 'map', component: FullMapComponent}
 ];
 
 @NgModule({
@@ -21,14 +25,18 @@ const routes: Route[] = [
     HeaderComponent,
     HomeComponent,
     FaqComponent,
-    TalktousComponent
+    TalktousComponent,
+    FullMapComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    FarmsRouteService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
