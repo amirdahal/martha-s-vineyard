@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { FarmsRouteService } from '../farms/farms-route.service';
 
 @Component({
@@ -8,12 +10,20 @@ import { FarmsRouteService } from '../farms/farms-route.service';
 })
 export class FullMapComponent implements OnInit {
 
+  subs: Subscription;
+
   farms = [];
-  constructor(private farmsService: FarmsRouteService) { }
+  nexturl = "";
+  constructor(private farmsService: FarmsRouteService, private router:Router) { }
 
   ngOnInit() {
     this.farms = this.farmsService.getFarms();
-    console.log(this.farms);
+    
+  }
+
+  navigate(slug:String) {
+    console.log(slug);
+    this.router.navigate(['/map', slug]);
   }
 
 }

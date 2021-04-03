@@ -1,1 +1,49 @@
-<p *ngFor="let f of farms">{{ f.name }}</p>
+<div class="container">
+    <div class="row text-center mt-3">
+        <div class="col-3 col-md-3">
+            <div class="dropdown">
+                <button class="btn btn-link">A - G <i class="fa fa-arrow-down"></i></button>
+                <div class="dropdown-content">
+                    <button *ngFor="let f of farms" type="button" class="btn btn-link"
+                        (click)="navigate(f.slug)">{{f.name}}</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 col-md-3">
+            <div class="dropdown">
+                <button class="btn btn-link">H - O <i class="fa fa-arrow-down"></i></button>
+                <div class="dropdown-content">
+                    <button *ngFor="let f of farms" type="button" class="btn btn-link"
+                        (click)="navigate(f.slug)">{{f.name}}</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 col-md-3">
+            <div class="dropdown">
+                <button class="btn btn-link">P - S <i class="fa fa-arrow-down"></i></button>
+                <div class="dropdown-content">
+                    <button *ngFor="let f of farms" type="button" class="btn btn-link"
+                        (click)="navigate(f.slug)">{{f.name}}</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 col-md-3">
+            <div class="dropdown">
+                <button class="btn btn-link">T - Z <i class="fa fa-arrow-down"></i></button>
+                <div class="dropdown-content">
+                    <button *ngFor="let f of farms" type="button" class="btn btn-link"
+                        (click)="navigate(f.slug)">{{f.name}}</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="dropdown-divider mt-2 mb-2"></div>
+
+    <app-land-view-details></app-land-view-details>
+
+</div>

@@ -7,7 +7,7 @@ const LandDataA = [
   { id: 35, name: 'Bare Hill Preserve', slug: '35-bare-hill-preserve'},
   { id: 46, name: 'Ben Toms Preserve', slug: '46-ben-toms-preserve'},
   { id: 37, name: 'Blackwater Pond Reservation', slug: '37-blackwater-pond-reservation'},
-  { id: 61, name: 'Blue Barque Preserve', slug: '61-blue-barque-reserve'},
+  { id: 61, name: 'Blue Barque Preserve', slug: '61-blue-barque-preserve'},
   { id: 74, name: 'Caleb\'s Pond Preserve', slug: '74-calebs-pond-preserve'},
   { id: 22, name: 'Allen Farm', slug: '32-allen-farm'},
   { id: 22, name: 'Allen Farm', slug: '32-allen-farm'},
@@ -26,5 +26,9 @@ export class FarmsRouteService {
 
   getFarms() {
     return LandDataA;
+  }
+
+  getFarmDetails(slug:String) {
+    return LandDataA.filter(data => data['slug']==slug);
   }
 }
